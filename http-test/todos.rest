@@ -1,0 +1,28 @@
+### 获取所有待办事项
+GET http://localhost:8080/todos
+Accept: application/json
+
+### 通过 ID 获取待办事项
+GET http://localhost:8080/todos/1
+Accept: application/json
+
+### 创建新的待办事项
+POST http://localhost:8080/todos
+Content-Type: application/json
+
+{
+  "description": "学习 RESTful API",
+  "completed": false
+}
+
+### 更新现有待办事项
+PUT http://localhost:8080/todos/1
+Content-Type: application/json
+
+{
+  "description": "完成 RESTful API 学习",
+  "completed": true
+}
+
+### 删除待办事项
+DELETE http://localhost:8080/todos/1

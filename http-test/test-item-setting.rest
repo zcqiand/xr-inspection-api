@@ -1,0 +1,35 @@
+### 1. 创建检测项目设置
+POST http://localhost:8080/api/test-item-settings
+Content-Type: application/json
+
+{
+  "testItemType": "力学性能",
+  "testItemCode": "LX001",
+  "testItemName": "抗拉强度",
+  "testItemUnit": "MPa",
+  "sortOrder": 1
+}
+
+### 2. 更新检测项目设置
+PUT http://localhost:8080/api/test-item-settings/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "testItemType": "力学性能-更新",
+  "testItemCode": "LX001-UPDATED",
+  "testItemName": "抗拉强度-更新",
+  "testItemUnit": "N/mm²",
+  "sortOrder": 10
+}
+
+### 3. 获取检测项目设置详情
+GET http://localhost:8080/api/test-item-settings/1
+Accept: application/json
+
+### 4. 获取所有检测项目设置
+GET http://localhost:8080/api/test-item-settings
+Accept: application/json
+
+### 5. 删除检测项目设置
+DELETE http://localhost:8080/api/test-item-settings/1

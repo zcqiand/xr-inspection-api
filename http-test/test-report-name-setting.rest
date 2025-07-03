@@ -1,0 +1,33 @@
+### 1. 创建检测报告名称设置
+POST http://localhost:8080/api/test-report-name-settings
+Content-Type: application/json
+
+{
+  "reportCode": "TRNS003",
+  "reportAbbreviation": "钢筋焊接",
+  "reportName": "钢筋焊接接头检测报告",
+  "sortOrder": 3
+}
+
+### 2. 更新检测报告名称设置
+PUT http://localhost:8080/api/test-report-name-settings/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "reportCode": "TRNS001-UPDATED",
+  "reportAbbreviation": "钢筋力学-更新",
+  "reportName": "钢筋力学性能、工艺性能、重量偏差检测报告（更新）",
+  "sortOrder": 10
+}
+
+### 3. 获取检测报告名称设置详情
+GET http://localhost:8080/api/test-report-name-settings/1
+Accept: application/json
+
+### 4. 获取所有检测报告名称设置
+GET http://localhost:8080/api/test-report-name-settings
+Accept: application/json
+
+### 5. 删除检测报告名称设置
+DELETE http://localhost:8080/api/test-report-name-settings/5

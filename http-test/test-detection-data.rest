@@ -1,0 +1,58 @@
+### 创建检测数据 (钢筋机械连接 - 极限抗拉强度)
+POST http://localhost:8080/api/test-detection-data
+Content-Type: application/json
+
+{
+  "testResultId": 8,
+  "fractureLocation": "连接件内"
+}
+
+### 创建检测数据 (钢筋焊接 - 抗拉强度断口离焊缝距离)
+POST http://localhost:8080/api/test-detection-data
+Content-Type: application/json
+
+{
+  "testResultId": 10,
+  "fractureDistanceToWeld": 15.2,
+  "fractureCharacteristic": "韧性断裂"
+}
+
+### 创建检测数据 (钢筋焊接 - 断裂特征)
+POST http://localhost:8080/api/test-detection-data
+Content-Type: application/json
+
+{
+  "testResultId": 10,
+  "fractureDistanceToWeld": null,
+  "fractureCharacteristic": "脆性断裂"
+}
+
+### 更新检测数据 (钢筋机械连接 - 极限抗拉强度)
+PUT http://localhost:8080/api/test-detection-data
+Content-Type: application/json
+
+{
+  "id": 7,
+  "testResultId": 8,
+  "fractureLocation": "连接件外"
+}
+
+### 更新检测数据 (钢筋焊接 - 抗拉强度断口离焊缝距离)
+PUT http://localhost:8080/api/test-detection-data
+Content-Type: application/json
+
+{
+  "id": 9,
+  "testResultId": 10,
+  "fractureDistanceToWeld": 12.0,
+  "fractureCharacteristic": "剪切断裂"
+}
+
+### 获取所有检测数据 (根据testResultId)
+GET http://localhost:8080/api/test-detection-data/by-test-result/10
+
+### 获取单个检测数据
+GET http://localhost:8080/api/test-detection-data/7
+
+### 删除检测数据
+DELETE http://localhost:8080/api/test-detection-data/1
