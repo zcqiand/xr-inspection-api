@@ -27,6 +27,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
+                        .requestMatchers("/api/reports/**/download").hasRole("REPORT_DOWNLOADER")
                         .anyRequest().permitAll())
                 .csrf().disable()
                 .headers().frameOptions().disable()
