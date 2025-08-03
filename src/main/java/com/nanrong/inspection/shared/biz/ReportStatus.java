@@ -1,10 +1,11 @@
 package com.nanrong.inspection.shared.biz;
 
 public enum ReportStatus {
+
     /**
-     * 报告委托中
+     * 草稿
      */
-    REPORT_ENTRUSTING,
+    DRAFT,
     
     /**
      * 报告已委托
@@ -39,7 +40,7 @@ public enum ReportStatus {
     /**
      * 报告已发放
      */
-    REPORT_DISTRIBUTED,
+    REPORT_ISSUED,
     
     /**
      * 报告已归档

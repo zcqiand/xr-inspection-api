@@ -58,7 +58,7 @@ public class PersonnelServiceImpl implements PersonnelService {
 
     @Override
     public WorkloadAnalysisVO analyzeWorkload(String startDate, String endDate) {
-        // 实现工作量分析的逻辑
-        return userRepository.calculateWorkload(startDate, endDate);
+        // TODO: 需要重新实现工作量分析逻辑（原实现依赖已删除的tasks字段）
+        return null; // 临时返回null
     }
 }

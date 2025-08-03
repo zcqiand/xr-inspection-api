@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldNameConstants;
 import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 /**
  * 报告修改请求
@@ -50,4 +51,10 @@ public class ReportModifyRequest {
     
     // 备注
     private String remarks;
+    
+    // 登记人
+    private String registrant;
+    
+    // 登记时间
+    private LocalDateTime registrationTime;
 }

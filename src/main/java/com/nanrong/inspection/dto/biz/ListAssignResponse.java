@@ -8,7 +8,7 @@ import java.time.OffsetDateTime;
 @Data
 @FieldNameConstants
 @Accessors(chain = true)
-public class TaskAssignmentResponse {
+public class ListAssignResponse {
     /**
      * 任务分配ID
      */

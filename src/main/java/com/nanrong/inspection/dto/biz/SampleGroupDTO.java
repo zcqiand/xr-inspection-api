@@ -1,10 +1,11 @@
 package com.nanrong.inspection.dto.biz;
 
+import com.nanrong.inspection.domain.biz.SampleGroup.SampleStatus;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldNameConstants;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @Data
 @FieldNameConstants
@@ -18,7 +19,7 @@ public class SampleGroupDTO {
     /**
      * 接收时间
      */
-    private LocalDateTime receivedTime;
+    private OffsetDateTime receivedTime;
     
     /**
      * 存储温度
@@ -28,7 +29,7 @@ public class SampleGroupDTO {
     /**
      * 状态
      */
-    private String status;
+    private SampleStatus status;
     
     /**
      * 关联的委托任务ID

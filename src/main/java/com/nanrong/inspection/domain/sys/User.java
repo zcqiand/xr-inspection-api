@@ -17,7 +17,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.nanrong.inspection.domain.biz.TaskAssignment;
 import com.nanrong.inspection.domain.biz.UserQualification;
 
 /*
@@ -54,9 +53,6 @@ public class User implements UserDetails {
     @Comment("用户角色列表")
     private List<Role> roles = new ArrayList<>();
     
-    @OneToMany(mappedBy = "assignee")
-    @Comment("分配的任务列表")
-    private List<TaskAssignment> tasks = new ArrayList<>();
 
     @OneToMany(mappedBy = "user")
     @Comment("用户资质列表")

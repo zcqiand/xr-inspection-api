@@ -3,6 +3,7 @@ package com.nanrong.inspection.dto.biz;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldNameConstants;
+import java.time.LocalDateTime;
 
 @Data
 @FieldNameConstants
@@ -37,4 +38,10 @@ public class ReportReviewRequest {
      * 批注位置
      */
     private String annotationPositions; // JSON格式的批注位置
+    
+    // 登记人
+    private String registrant;
+    
+    // 登记时间
+    private LocalDateTime registrationTime;
 }

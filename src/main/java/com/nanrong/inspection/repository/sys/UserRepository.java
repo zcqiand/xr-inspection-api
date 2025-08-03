@@ -45,14 +45,4 @@ public interface UserRepository extends JpaRepository<User, Long> {
            "WHERE uq.user.id = :userId AND uq.qualification.id = :qualificationId")
     void updateCompetenceLevel(Long userId, Long qualificationId, String newLevel);
     
-    /**
-     * 计算工作量
-     */
-    @Query("SELECT new com.nanrong.inspection.domain.biz.WorkloadAnalysisVO(u.id, u.username, " +
-           "COUNT(a), SUM(CASE WHEN a.status = 'COMPLETED' THEN 1 ELSE 0 END), " +
-           "CAST(SUM(CASE WHEN a.status = 'COMPLETED' THEN 1 ELSE 0 END) AS double) / COUNT(a), u.department) " +
-           "FROM User u LEFT JOIN u.tasks a " +
-           "WHERE a.plannedStartTime BETWEEN :startDate AND :endDate " +
-           "GROUP BY u.id")
-    WorkloadAnalysisVO calculateWorkload(String startDate, String endDate);
 }

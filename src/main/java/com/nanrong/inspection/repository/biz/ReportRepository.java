@@ -9,6 +9,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public interface ReportRepository extends JpaRepository<Report, Long> {
-    // 按任务分配ID查找报告
-    List<Report> findByTaskAssignmentId(Long taskAssignmentId);
+    // 按报告类型查找报告（委托登记类型为"ENTRUSTMENT"）
+    List<Report> findByReportType(String reportType);
+    
+    // 按报告状态查找报告
+    List<Report> findByReportStatus(ReportStatus reportStatus);
 }
